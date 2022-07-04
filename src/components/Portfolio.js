@@ -5,12 +5,11 @@ const Portfolio = () => {
 	const [filteredData, setFilteredData] = useState(portfolioData);
 
 	const filter = (type) => {
-		console.log(type);
 		if(type === "All"){
 			setFilteredData(portfolioData);
 		}else{
 			const newValues = portfolioData.filter(elem => elem.type === type);
-			filteredData = setFilteredData(newValues);
+			setFilteredData(newValues);
 		}
 	}
 	
