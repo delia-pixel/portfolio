@@ -25,10 +25,10 @@ const Portfolio = () => {
 				<div className="row">
 					<div className="col-lg-12 d-flex justify-content-center">
 						<ul id="portfolio-flters">
-							<li data-filter="*" className="filter-active" onClick={() => filter("All")}>All</li>
-							<li data-filter=".filter-app" onClick={() => filter("App")}>App</li>
-							<li data-filter=".filter-card" onClick={() => filter("Card")}>Card</li>
-							<li data-filter=".filter-web" onClick={() => filter("Web")}>Web</li>
+							<li className="filter-active" onClick={() => filter("All")}>All</li>
+							<li onClick={() => filter("App")}>App</li>
+							<li onClick={() => filter("Card")}>Card</li>
+							<li onClick={() => filter("Web")}>Web</li>
 						</ul>
 					</div>
 				</div>
@@ -43,7 +43,7 @@ const Portfolio = () => {
 									<h4>{item.title}</h4>
 									<p>{item.type}</p>
 									<div className="portfolio-links">
-										<a href={item.image} data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+										<a href={item.image} data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1"><i className="bx bx-plus"></i></a>
 										<a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" className="portfolio-details-lightbox" title="Portfolio Details"><i className="bx bx-link"></i></a>
 									</div>
 								</div>
