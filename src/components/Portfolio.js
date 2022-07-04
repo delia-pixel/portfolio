@@ -1,24 +1,24 @@
-import { type } from "@testing-library/user-event/dist/type";
-import React from "react";
+import React, { useState } from "react";
 import { portfolioData } from "../data/portfolio";
 
 const Portfolio = () => {
-
-	let filteredData = portfolioData;
+	const [filteredData, setFilteredData] = useState(portfolioData);
 
 	const filter = (type) => {
+		console.log(type);
 		if(type === "All"){
-			filteredData = portfolioData;
+			setFilteredData(portfolioData);
 		}else{
-			filteredData = portfolioData.filter(elem => elem.type === type);
+			const newValues = portfolioData.filter(elem => elem.type === type);
+			filteredData = setFilteredData(newValues);
 		}
 	}
 	
   return (
-    <div id="portfolio" class="portfolio">
-			<div class="container">
+    <div id="portfolio" className="portfolio">
+			<div className="container">
 
-				<div class="section-title">
+				<div className="section-title">
 					<h2>Portfolio</h2>
 					<p>My Works</p>
 				</div>
@@ -45,7 +45,7 @@ const Portfolio = () => {
 									<p>{item.type}</p>
 									<div className="portfolio-links">
 										<a href={item.image} data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-										<a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" className="portfolio-details-lightbox" title="Portfolio Details"><i class="bx bx-link"></i></a>
+										<a href="portfolio-details.html" data-gallery="portfolioDetailsGallery" data-glightbox="type: external" className="portfolio-details-lightbox" title="Portfolio Details"><i className="bx bx-link"></i></a>
 									</div>
 								</div>
 							</div>
