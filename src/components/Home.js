@@ -1,8 +1,8 @@
 import React from "react";
 
-const Header = () => {
+const Home = () => {
   return (
-    <header id="header">
+    <div id="header">
 			<div className="container">
 				<h1><a href="index.html">Emily Jones</a></h1>
 				<a href="index.html" className="mr-auto">
@@ -13,11 +13,11 @@ const Header = () => {
 				<nav id="navbar" className="navbar">
 					<ul>
 						<li><a className="nav-link active" href="#header">Home</a></li>
-						<li><a className="nav-link" href="#about">About</a></li>
-						<li><a className="nav-link" href="#resume">Resume</a></li>
-						<li><a className="nav-link" href="#services">Services</a></li>
-						<li><a className="nav-link" href="#portfolio">Portfolio</a></li>
-						<li><a className="nav-link" href="#contact">Contact</a></li>
+						<li><a className="nav-link" href="/about">About</a></li>
+						<li><a className="nav-link" href="/resume">Resume</a></li>
+						<li><a className="nav-link" href="/services">Services</a></li>
+						<li><a className="nav-link" href="/portfolio">Portfolio</a></li>
+						<li><a className="nav-link" href="/contact">Contact</a></li>
 					</ul>
 					<i className="bi bi-list mobile-nav-toggle"></i>
 				</nav>
@@ -30,8 +30,8 @@ const Header = () => {
 				</div>
 
 			</div>
-		</header>
+		</div>
   )
 }
 
-export default Header;
+export default Home;
