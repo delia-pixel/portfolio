@@ -285,31 +285,31 @@ body {
   /*--------------------------------------------------------------
   # Sections General
   --------------------------------------------------------------*/
-  section {
+  #section {
     overflow: hidden;
     position: absolute;
     width: 100%;
-    top: 140px;
-    bottom: 100%;
-    opacity: 0;
-    transition: ease-in-out 0.4s;
+    top: 100px;
+    /* bottom: 100%; */
+    /* opacity: 0; */
+    transition: ease-in-out 0.3s;
     z-index: 2;
   }
-  section.section-show {
+  div.section-show {
     top: 100px;
     bottom: auto;
     opacity: 1;
     padding-bottom: 45px;
   }
-  section .container {
+  #section .container {
     background: rgba(0, 0, 0, 0.9);
     padding: 30px;
   }
   @media (max-width: 768px) {
-    section {
+    #section {
       top: 120px;
     }
-    section.section-show {
+    #section.section-show {
       top: 80px;
     }
   }
