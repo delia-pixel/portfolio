@@ -124,6 +124,7 @@ body {
       flex-direction: column;
       align-items: center;
     }
+
   }
   
   /* Header Top */
@@ -155,6 +156,9 @@ body {
     }
     #header.header-top h1 {
       font-size: 26px;
+    }
+    .swiper-slide{
+      width: 315px!important;
     }
   }
   
